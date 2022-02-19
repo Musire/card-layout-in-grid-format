@@ -1,26 +1,55 @@
 :root {
     --containerH: 75vh;
-    --containerW: 80vw;
+    --containerW: 85vw;
   }
   
   body {
     background-color: #16161D;
     height: 100vh;
     width: 100vw;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body * {
+    transition: 500ms ease-in-out;
+  }
+  
+  h1, h2, h3, h4 {
+    color: whitesmoke;
   }
   
   #main-container {
     height: var(--containerH);
     width: var(--containerW);
     background-color: #212121;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #main-container .card {
+    margin: 1%;
   }
   
   .card {
-    background-color: lightblue;
-    opacity: .60;
-    height: calc(var(--containerH) * .15);
-    width: calc(var(--containerW) * .15);
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    height: clamp(2em, 100%, 20rem);
+    width: clamp(25rem, 25vw, 30rem);
     border: solid 3px black;
-    border-radius: 3px;
+    border-radius: 6px;
+  }
+  
+  #card-head {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  
+  .card span {
+    margin: 0 1em;
   }
