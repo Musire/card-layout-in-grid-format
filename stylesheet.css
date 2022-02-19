@@ -1,5 +1,5 @@
 :root {
-    --containerH: 75vh;
+    --containerH: 85vh;
     --containerW: 85vw;
   }
   
@@ -13,11 +13,16 @@
   }
   
   body * {
-    transition: 500ms ease-in-out;
+    transition: 350ms ease-in-out;
   }
   
   h1, h2, h3, h4 {
     color: whitesmoke;
+  }
+  
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
   }
   
   #main-container {
@@ -26,6 +31,8 @@
     background-color: #212121;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
   }
   
   #main-container .card {
@@ -37,19 +44,39 @@
     display: flex;
     flex-direction: column;
     opacity: 1;
-    height: clamp(2em, 100%, 20rem);
-    width: clamp(25rem, 25vw, 30rem);
+    height: clamp(4em, 120%, 20rem);
+    width: clamp(18rem, 25vw, 20rem);
     border: solid 3px black;
     border-radius: 6px;
   }
   
   #card-head {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40%
   }
   
-  .card span {
-    margin: 0 1em;
+  #card-head li {
+    margin: 1vw;
+    list-style-type: none;
   }
+  
+  #codepen-icon {
+    align-self: flex-end;
+  }
+  
+  .card .section {
+    margin: 0 1em;
+    height: auto;
+  }
+  
+  @media (max-width: 400px) {
+    .card {
+      width: clamp(1em 80vw 33%);
+      height: 44vh;
+    }
+  }
+  
+  
