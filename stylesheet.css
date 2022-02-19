@@ -1,0 +1,26 @@
+:root {
+    --containerH: 75vh;
+    --containerW: 80vw;
+  }
+  
+  body {
+    background-color: #16161D;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+  }
+  
+  #main-container {
+    height: var(--containerH);
+    width: var(--containerW);
+    background-color: #212121;
+  }
+  
+  .card {
+    background-color: lightblue;
+    opacity: .60;
+    height: calc(var(--containerH) * .15);
+    width: calc(var(--containerW) * .15);
+    border: solid 3px black;
+    border-radius: 3px;
+  }
